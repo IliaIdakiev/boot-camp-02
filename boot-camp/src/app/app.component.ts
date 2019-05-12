@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { TodoService } from './todo.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,20 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  todos = [
-    {
-      title: 'Do something',
-      completed: true
-    }
-  ];
+  todos: any[];
 
-  constructor() { }
+  constructor(public todoService: TodoService) {
+    this.todos = todoService.todos;
+  }
 
   toggleCopletedHandler(idx: number) {
-    this.todos[idx].completed = !this.todos[idx].completed;
+    this.todoService.toggle(idx);
   }
 
   removeHandler(idx: number) {
-    this.todos = this.todos.filter((el, index) => index !== idx);
+    this.todoService.remove(idx);
   }
 }
