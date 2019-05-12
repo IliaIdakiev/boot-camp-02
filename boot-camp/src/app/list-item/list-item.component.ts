@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-list-item',
@@ -11,9 +11,16 @@ export class ListItemComponent implements OnInit {
   @Output() toggle: EventEmitter<any> = new EventEmitter();
   @Output() remove: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+    console.log(this.todo, 'constr');
+  }
 
   ngOnInit() {
+    console.log(this.todo, 'init');
+  }
+
+  addHandler() {
+
   }
 
   toggleCopletedHandler() {

@@ -22,4 +22,8 @@ export class TodoService {
   remove(idx: number) {
     this.todos = this.todos.filter((el, index) => index !== idx);
   }
+
+  add(todo) {
+    this.todos = this.todos.concat(todo);
+  }
 }
