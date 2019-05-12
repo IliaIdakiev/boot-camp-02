@@ -1,13 +1,5 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<input #titleInput type="text">
-<button (click)="addHandler()">Add</button>
-<div>
-  <div id="todo-itmes">
-    <div *ngIf="todos.length === 0">List is empty</div>
-    <ul *ngIf="todos.length > 0">
-      <li *ngFor="let todo of todos; let i = index;" [ngClass]="{ 'completed': todo.completed }">
-        <app-list-item [todo]="todo" (toggle)="toggleCopletedHandler(i)" (remove)="removeHandler(i)"></app-list-item>
-      </li>
-    </ul>
-  </div>
-</div>
+<nav>
+  <a routerLink="/todos">Todo List</a>
+  <a routerLink="/add">Add Todo</a>
+</nav>
+<router-outlet></router-outlet>

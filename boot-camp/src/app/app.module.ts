@@ -4,15 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { CommonModule } from '@angular/common';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { AppRoutingModule } from './app-routing.module';
+import { TodoEntityComponent } from './todo-entity/todo-entity.component';
 // import { TodoService } from './todo.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListItemComponent
+    ListItemComponent,
+    TodoListComponent,
+    TodoEntityComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     // TodoService,
