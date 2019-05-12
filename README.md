@@ -1,5 +1,8 @@
 # Angular Sofia Boot Camp
 
+WIFI: CampusX
+Password: DigitalCommunity!
+
 ## Workshop Schedule
 
 1. Quick Review of what Angular CLI is, information about the generated files and angular bootstrap basics.

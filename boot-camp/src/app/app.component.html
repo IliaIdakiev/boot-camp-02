@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <input #titleInput type="text">
+  <!-- const titleInput = document.createElement('input'); -->
+  <button (click)="changeTitleHandler(titleInput);">Change title</button>
+  <!-- document.createElement('button').addEventListener('click', function() { changeTitleHandler(titleInput) }); titleInput.value = ''; -->
+</div>
