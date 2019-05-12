@@ -6,12 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'boot-camp';
+
+  todos = [
+    {
+      title: 'Do something',
+      completed: true
+    }
+  ];
 
   constructor() { }
 
-  changeTitleHandler(titleInput: HTMLInputElement) {
-    this.title = titleInput.value;
-    titleInput.value = '';
+  toggleCopletedHandler(idx: number) {
+    this.todos[idx].completed = !this.todos[idx].completed;
+  }
+
+  removeHandler(idx: number) {
+    this.todos = this.todos.filter((el, index) => index !== idx);
   }
 }
